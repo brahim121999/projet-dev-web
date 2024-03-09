@@ -17,6 +17,8 @@ def embed_chunks_and_upload_to_pinecone(chunks, index_name):
     if index_name in pinecone.list_indexes():
         pinecone.delete_index(name=index_name)
 
+    print(PINECONE_API_KEY)
+
     # create a new index in Pinecone
     # the EMBEDDING_DIMENSION is based on what the
     # OpenAI embedding model outputs

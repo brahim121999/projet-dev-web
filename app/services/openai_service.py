@@ -7,6 +7,8 @@ OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 OPENAI_EMBEDDING_MODEL = 'text-embedding-ada-002'
 
 def get_embedding(chunk):
+  print(OPENAI_API_KEY)
+
   url = 'https://api.openai.com/v1/embeddings'
   headers = {
       'content-type': 'application/json; charset=utf-8',
@@ -23,6 +25,8 @@ def get_embedding(chunk):
 
 # Now you can access your API key or other variables
 api_key = os.getenv('OPENAI_API_KEY')
+
+
 
 
 # add this to the top of the file under the imports
